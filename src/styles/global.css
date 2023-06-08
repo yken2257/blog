@@ -1,79 +1,67 @@
-html {
-    background-color: #f1f5f9;
-    font-family: sans-serif;
-}
-
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
 body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
-    line-height: 1.5;
+	font-family: Verdana, sans-serif;
+	margin: auto;
+	padding: 20px;
+	max-width: 65ch;
+	text-align: left;
+	background-color: #fff;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-height: 1.5;
+	color: #444;
 }
-
-* {
-    box-sizing: border-box;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+	color: #222;
 }
-
-h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
+a {
+	color: #3273dc;
 }
-
-/* nav styles */
-.hamburger {
-    padding-right: 20px;
-    cursor: pointer;
+nav a {
+	margin-right: 10px;
 }
-  
-.hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #ff9776;
+textarea {
+	width: 100%;
+	font-size: 16px;
 }
-
-.nav-links {
-    width: 100%;
-    top: 5rem;
-    left: 48px;
-    background-color: #ff9776;
-    display: none;
-    margin: 0;
+input {
+	font-size: 16px;
 }
-
-.nav-links a {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
+content {
+	line-height: 1.6;
 }
-
-.nav-links a:hover, a:focus {
-    background-color: #ff9776;
+table {
+	width: 100%;
 }
-
-.expanded {
-    display: unset;
+img {
+	max-width: 100%;
+	height: auto;
 }
-
-@media screen and (min-width: 636px) {
-    .nav-links {
-        margin-left: 5em;
-        display: block;
-        position: static;
-        width: auto;
-        background: none;
-    }
-    .nav-links a {
-        display: inline-block;
-        padding: 15px 20px;
-    }
-    .hamburger {
-        display: none;
-    }
+code {
+	padding: 2px 5px;
+	background-color: #f2f2f2;
+}
+pre {
+	padding: 1rem;
+}
+pre > code {
+	all: unset;
+}
+blockquote {
+	border: 1px solid #999;
+	color: #222;
+	padding: 2px 0px 2px 20px;
+	margin: 0px;
+	font-style: italic;
 }
