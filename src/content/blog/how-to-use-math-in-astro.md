@@ -4,7 +4,7 @@ description: "Lorem ipsum dolor sit amet"
 pubDate: "June 9 2023"
 heroImage: "/placeholder-hero.jpg"
 ---
-
+Astroのmarkdownファイルに$\KaTeX$の数式を書く手順をまとめます。
 # Step 1: パッケージのインストール
 必要なパッケージをインストールします。
 ```
