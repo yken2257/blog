@@ -1,10 +1,10 @@
 ---
-title: "Astoのmarkdownに数式を書く方法"
-description: "Lorem ipsum dolor sit amet"
+title: "Astroのmarkdownに数式を書く方法"
+description: "Astroのmarkdownファイルに数式を書けるようにする手順について"
 pubDate: "June 9 2023"
 heroImage: "/placeholder-hero.jpg"
 ---
-Astroのmarkdownファイルに$\KaTeX$の数式を書く手順をまとめます。
+Astroのmarkdownファイルに$\KaTeX$の数式を書けるようにする手順をまとめます。
 # Step 1: パッケージのインストール
 必要なパッケージをインストールします。
 ```
