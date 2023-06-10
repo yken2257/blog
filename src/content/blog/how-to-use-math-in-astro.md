@@ -1,10 +1,10 @@
 ---
-title: "Astroのmarkdownに数式を書く方法"
-description: "Astroのmarkdownファイルに数式を書けるようにする手順について"
+title: "AstroのMarkdownに数式を書く方法"
+description: "AstroのMarkdownファイルに数式を書けるようにする手順"
 pubDate: "June 9 2023"
 heroImage: "/placeholder-hero.jpg"
 ---
-Astroのmarkdownファイルに$\KaTeX$の数式を書けるようにする手順をまとめます。
+[Astro](https://astro.build/)のMarkdownファイルに$\KaTeX$の数式を書けるようにする手順をまとめます。
 # Step 1: パッケージのインストール
 必要なパッケージをインストールします。
 ```
@@ -15,13 +15,13 @@ $ npm install remark-math rehype-katex
 `astro.config.mjs`を編集します。
 
 - 必要なパッケージをインポート
-```javascript
+```astro.config.mjs
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 ```
 
-- `defineConfig`にmarkdownの項目を以下のように記載
-```javascript
+- `defineConfig`にMarkdownの項目を以下のように記載
+```astro.config.mjs
 export default defineConfig({
     //すでに書かれている部分は略
     markdown: {
@@ -39,10 +39,10 @@ export default defineConfig({
 
 # Step 3: MarkdownファイルのheadタグでKaTexのスタイルシートを読むようにする
 AstroのMarkdownレイアウトファイルのheadタグに$\KaTeX$スタイルシートを追加します。
-形式は[KaTexのドキュメント](https://katex.org/docs/browser.html)を参照してください。
-Markdownレイアウトファイルは、`npm create astro@latest`でAstroブロジェクトを作成したときにブログテンプレートを選んだ場合は、`src/layouts/BlogPosts.astro`です。
+形式は[KaTeXのドキュメント](https://katex.org/docs/browser.html)を参照してください。
+Markdownレイアウトファイルは、`npm create astro@latest`によるAstroブロジェクト新規作成時にブログテンプレートを選んだ場合は、`src/layouts/BlogPosts.astro`です。
 
-```html
+```BlogPosts.astro
 <head>
     <!-- 以下をheadタグに追加 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
