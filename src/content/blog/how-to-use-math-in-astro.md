@@ -15,13 +15,13 @@ $ npm install remark-math rehype-katex
 `astro.config.mjs`を編集します。
 
 - 必要なパッケージをインポート
-```astro.config.mjs
+```js
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 ```
 
 - `defineConfig`にMarkdownの項目を以下のように記載
-```astro.config.mjs
+```js
 export default defineConfig({
     //すでに書かれている部分は略
     markdown: {
@@ -42,7 +42,7 @@ AstroのMarkdownレイアウトファイルのheadタグに$\KaTeX$スタイル�
 形式は[KaTeXのドキュメント](https://katex.org/docs/browser.html)を参照してください。
 Markdownレイアウトファイルは、`npm create astro@latest`によるAstroブロジェクト新規作成時にブログテンプレートを選んだ場合は、`src/layouts/BlogPosts.astro`です。
 
-```BlogPosts.astro
+```astro
 <head>
     <!-- 以下をheadタグに追加 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
