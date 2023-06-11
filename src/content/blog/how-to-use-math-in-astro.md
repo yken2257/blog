@@ -1,6 +1,6 @@
 ---
 title: "AstroのMarkdownに数式を書く方法"
-description: "AstroのMarkdownファイルに数式を書けるようにする手順"
+description: "AstroのMarkdownファイルにTeXの数式を書いてレンダリングできるようにする手順をまとめます"
 pubDate: "June 9 2023"
 heroImage: "/placeholder-hero.jpg"
 ---

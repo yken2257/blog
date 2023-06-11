@@ -4,22 +4,22 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 @font-face {
-	font-family: 'MPLUSRounded1c';
-	src: url('/fonts/MPLUSRounded1c.woff') format('woff');
+	font-family: 'MPLUS1p';
+	src: url('/fonts/MPLUS1p-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
-	font-family: 'MPLUSRounded1c';
-	src: url('/fonts/MPLUSRounded1c-Bold.woff') format('woff');
+	font-family: 'MPLUS1p';
+	src: url('/fonts/MPLUS1p-Medium.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
 }
 
 body {
-	font-family: 'MPLUSRounded1c', sans-serif;
+	font-family: 'MPLUS1p', sans-serif;
 	margin: auto;
 	padding: 20px;
 	max-width: 80ch;
@@ -31,6 +31,7 @@ body {
 	color: #444;
 }
 .title {
+	font-size: 36px;
 	font-weight: bold;
 }
 h1,
@@ -43,20 +44,31 @@ strong,
 b {
 	color: #222;
 }
+h1 {
+	font-size : 34px;
+	font-weight: bold;
+	margin-top: 1.5em;
+}
 h2 {
     font-size : 30px;
+	font-weight: bold;
+	margin-top: 1em;
 }
 h3 {
     font-size : 24px;
+	font-weight: bold;
 }
 h4 {
     font-size : 20px;
+	font-weight: bold;
 }
 h5 {
     font-size : 16px;
+	font-weight: bold;
 }
 h6 {
     font-size : 14px;
+	font-weight: bold;
 }
 a {
 	color: #3273dc;

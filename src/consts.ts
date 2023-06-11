@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'Shiro space';
 export const SITE_DESCRIPTION = 'Welcome to shiro space';
+export const SITE_DOMAIN = 'shiro-space.pages.dev';
