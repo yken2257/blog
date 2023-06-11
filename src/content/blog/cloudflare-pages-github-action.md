@@ -2,7 +2,6 @@
 title: "GitHub Actionsを使ってプッシュごとにCloudflare Pagesにデプロイする方法"
 description: "GitHub Actionsを使ってプッシュごとにCloudflare Pagesにデプロイする手順について"
 pubDate: "June 10 2023"
-heroImage: "/placeholder-hero.jpg"
 ---
 
 Cloudflareが公式に「[Cloudflare Pages GitHub Action](https://github.com/cloudflare/pages-action)」というGitHub Actionsを公開しているので、それを使ってGitHub Actions経由でプッシュごとにCloudflare Pagesにデプロイする手順をまとめます。
