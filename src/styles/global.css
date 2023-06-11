@@ -5,7 +5,7 @@
  */
  @font-face {
 	font-family: 'MPLUSRounded1c';
-	src: url('/fonts/MPLUSRounded1c.ttf') format('truetype');
+	src: url('/fonts/MPLUSRounded1c.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
