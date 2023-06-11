@@ -3,15 +3,22 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
- @font-face {
+@font-face {
 	font-family: 'MPLUSRounded1c';
 	src: url('/fonts/MPLUSRounded1c.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
+@font-face {
+	font-family: 'MPLUSRounded1c';
+	src: url('/fonts/MPLUSRounded1c-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
 
- body {
+body {
 	font-family: 'MPLUSRounded1c', sans-serif;
 	margin: auto;
 	padding: 20px;
@@ -23,6 +30,9 @@
 	line-height: 1.5;
 	color: #444;
 }
+.title {
+	font-weight: bold;
+}
 h1,
 h2,
 h3,
@@ -32,6 +42,21 @@ h6,
 strong,
 b {
 	color: #222;
+}
+h2 {
+    font-size : 30px;
+}
+h3 {
+    font-size : 24px;
+}
+h4 {
+    font-size : 20px;
+}
+h5 {
+    font-size : 16px;
+}
+h6 {
+    font-size : 14px;
 }
 a {
 	color: #3273dc;
