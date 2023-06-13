@@ -20,9 +20,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
 			onload="renderMathInElement(document.body);"></script>
 		<style>
+			.hero {
+				margin-bottom: 1rem;
+			}
 			.title {
 				/* font-size: 2em; */
-				margin: 0.25em 0 0;
+				margin: 0.1em 0 0.1em;
 			}
 			hr {
 				border-top: 1px solid #ddd;
@@ -38,13 +41,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main>
 			<article>
-				{heroImage && <img width={880} height={360} src={heroImage} alt="" />}
+				{heroImage && <img class="hero" width={880} height={360} src={heroImage} alt="" />}
 				<h1 class="title">{title}</h1>
-				<FormattedDate date={pubDate} />
+				<i class="fa-regular fa-clock"></i> <FormattedDate date={pubDate} />
 				{
 					updatedDate && (
 						<div class="last-updated-on">
-							Last updated on <FormattedDate date={updatedDate} />
+							<i class="fa-solid fa-clock-rotate-left"></i> Last updated on <FormattedDate date={updatedDate} />
 						</div>
 					)
 				}

@@ -4,22 +4,22 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 @font-face {
-	font-family: 'MPLUS1p';
-	src: url('/fonts/MPLUS1p-Regular.woff') format('woff');
+	font-family: 'LINESeedJP';
+	src: url('/fonts/LINESeedJP_OTF_Rg.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-	font-display: swap;
+	font-display: auto;
 }
 @font-face {
-	font-family: 'MPLUS1p';
-	src: url('/fonts/MPLUS1p-Medium.woff') format('woff');
+	font-family: 'LINESeedJP';
+	src: url('/fonts/LINESeedJP_OTF_Bd.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
-	font-display: swap;
+	font-display: auto;
 }
 
 body {
-	font-family: 'MPLUS1p', sans-serif;
+	font-family: 'LINESeedJP', sans-serif;
 	margin: auto;
 	padding: 20px;
 	max-width: 80ch;

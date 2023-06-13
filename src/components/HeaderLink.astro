@@ -12,7 +12,7 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 <a 
 	href={href} 
 	class:list={[className, 'nav-link', { active: isActive }]} 
-	{...(isActive ? {'aria-current' : 'page'} : {})} 
+	≈ 
 	{...props}
 >
 	<slot />

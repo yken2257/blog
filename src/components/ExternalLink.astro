@@ -11,6 +11,11 @@ const isExternal = href instanceof URL
     : (typeof href === 'string' ? !href.includes(SITE_DOMAIN) : true);
 
 ---
-<a href={href} target={isExternal ? '_blank' : '_self'} {...props}>
+<a 
+    href={href} 
+    target={isExternal ? '_blank' : '_self'} 
+    {...(isExternal ? {'rel' : 'noopener'} : {})}
+    {...props}
+>
     <slot />
 </a>
