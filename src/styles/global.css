@@ -8,14 +8,14 @@
 	src: url('/fonts/LINESeedJP_OTF_Rg.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-	font-display: auto;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'LINESeedJP';
 	src: url('/fonts/LINESeedJP_OTF_Bd.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
-	font-display: auto;
+	font-display: swap;
 }
 
 body {
