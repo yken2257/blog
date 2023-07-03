@@ -3,7 +3,7 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
-@font-face {
+/* @font-face {
 	font-family: 'LINESeedJP';
 	src: url('/fonts/LINESeedJP_OTF_Rg.woff') format('woff');
 	font-weight: normal;
@@ -16,7 +16,7 @@
 	font-weight: bold;
 	font-style: normal;
 	font-display: auto;
-}
+} */
 
 body {
 	font-family: 'LINESeedJP', sans-serif;
