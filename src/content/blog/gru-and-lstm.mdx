@@ -2,13 +2,14 @@
 title: "GRU、LSTM"
 description: ""
 pubDate: "July 23 2023"
-updatedDate: "July 24 2023"
+updatedDate: "July 26 2023"
 ---
 import ExternalLink from '../../components/ExternalLink.astro';
 export const components = {a: ExternalLink}
 
-# 数式
+# GRU
 GRUとは、Gated Recurrent Unitの略で、RNNの一種。
+## 数式
 通常の単純なRNNは入力$x^{(t)}$と前の時刻の隠れ層$h^{(t-1)}$を入力として、次の時刻の隠れ層$h^{(t)}$を出力する。
 
 $$
@@ -30,7 +31,7 @@ $$
 
 突然複雑になった。
 
-# 説明
+## 説明
 GRUは、通常のRNNの隠れ層を、リセットゲートと更新ゲートに分けたもの。リセットゲートは、前の時刻の隠れ層をどれだけ無視するかを決める。更新ゲートは、前の時刻の隠れ層と現在の入力をどれだけ重視するかを決める。
 
 (4)式を見ると、 一つ前の隠れ層$h^{(t-1)}$と調整された隠れ層$\tilde{h}^{(t)}$の重み付き和を取っていることがわかる。その重み付き和のパラメータが$z^{(t)}$になっている。すなわち$z^{(t)}$は、一つ前の隠れ層$h^{(t-1)}$をどれだけ重視するか（$h$をどの程度更新するか）を決めるパラメータである。その$z^{(t)}$は入力$x^{(t)}$と前の時刻の隠れ層$h^{(t-1)}$から決まる。
@@ -39,6 +40,29 @@ GRUは、通常のRNNの隠れ層を、リセットゲートと更新ゲート�
 
 GRUは通常の単純なRNNに$r$と$z$という調整パラメータを追加したものと考えることができる。リセットゲート$r$が大きくなれば以前の情報が強く反映され、更新ゲート$z$が大きくなれば現在の情報が強く反映される。
 
+# LSTM
+LSTMとは、Long Short-Term Memoryの略。
+
+## 数式
+$$
+\begin{align}
+i^{(t)} &= f_i^{\sigma}(x^{(t)},h^{(t-1)}) \\
+f^{(t)} &= f_f^{\sigma}(x^{(t)},h^{(t-1)}) \\
+o^{(t)} &= f_o^{\sigma}(x^{(t)},h^{(t-1)}) \\
+\tilde{c}^{(t)} &= f_c^{\tanh}(x^{(t)},h^{(t-1)}) \\
+c^{(t)} &= f^{(t)} \odot c^{(t-1)} + i^{(t)} \odot \tilde{c}^{(t)} \\
+h^{(t)} &= o^{(t)} \odot c^{(t)}
+\end{align}
+$$
+
+## 説明
+$i^{(t)},\ f^{(t)},\ o^{(t)}$はいずれも前の状態$h^{(t-1)}$と現在の入力$x^{(t)}$を線型結合してシグモイド関数に通したものである。シグモイド関数は0から1の値をとるため、ある値にこれらをかけると、その値をどれだけ重視するかを決めることができる。その意味でこれらはゲートと呼ばれる。
+
+$c^{(t)}$は遠い過去を含めた全体の長期記憶を、$h^{(t)}$は直近の短期記憶を表すと考える。全体の長期記憶$c^{(t)}$からどの成分をどれだけ取り出して短期記憶$h^{(t)}$とするかを決めるのが$o^{(t)}$である。$o^{(t)}$は出力ゲートと呼ばれる。
+$c^{(t)}$は一つ前の時刻の$c^{(t-1)}$とある入力$\tilde{c}^{(t)}$を線型結合している。$c^{(t-1)}$にかかる係数$f^{(t)}$は忘却ゲートと呼ばれる。$f^{(t)}$が大きければ$c^{(t-1)}$の情報を強く反映し、小さければ弱くなる。$\tilde{c}^{(t)}$は前の状態$h^{(t-1)}$と現在の入力$x^{(t)}$をtanhで活性化している（通常のRNNの出力）。通常のRNNの本来の出力をどれだけ取り入れるかを決めるのが入力ゲート$i^{(t)}$である。
+
 # 参考
 [【深層学習】GRU - RNN に記憶をもたせる試みその1【ディープラーニングの世界 vol. 10 】](https://youtu.be/K8ktkhAEuLM)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K8ktkhAEuLM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[【深層学習】LSTM - RNN に記憶をもたせる試みその2【ディープラーニングの世界 vol. 11 】](https://youtu.be/oxygME2UBFc)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oxygME2UBFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
