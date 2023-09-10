@@ -1,22 +1,24 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
-
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import sitemap from '@astrojs/sitemap';
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
-	integrations: [mdx(), sitemap()],
-    markdown: {
-        remarkPlugins: [
-            remarkMath,
-        ],
-        rehypePlugins: [
-            [rehypeKatex, {
-            // Katex plugin options
-            }]
-        ]
-    }
+  site: 'https://example.com',
+  integrations: [
+    mdx(), 
+    sitemap(), 
+    tailwind({
+      applyBaseStyles: false
+    })
+  ],
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [[rehypeKatex, {
+      // Katex plugin options
+    }]]
+  }
 });

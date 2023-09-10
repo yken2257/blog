@@ -1,29 +1,15 @@
 ---
-import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand mb-0 h1" href="/">{SITE_TITLE}</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav ms-auto">
-				<HeaderLink href="/">Home</HeaderLink>
-				<HeaderLink href="/blog">Blog</HeaderLink>
-			</div>
-		  </div>
-		</div>
-	</nav>
+<header class="mb-4">
+<nav class="rounded bg-gray-300 p-3 flex justify-between">
+  <div class="text-white text-xl">
+    <a class="text-white text-xl" href="/">{SITE_TITLE}</a>
+  </div>
+  <div class="flex space-x-5">
+    <a href="/" class="text-white text-lg hover:underline">Home</a>
+    <a href="/blog" class="text-white text-lg hover:underline">Blog</a>
+  </div>
+</nav>
 </header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>
